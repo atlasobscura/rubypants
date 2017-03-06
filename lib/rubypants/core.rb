@@ -346,7 +346,7 @@ class RubyPants < String
     # Double closing quotes:
     str.gsub!(/(#{close_class})"/,
               '\1' + entity(:double_right_quote))
-    str.gsub!(/"(\s|s\b|$)/,
+    str.gsub!(/"(\s|s\b)/,
               entity(:double_right_quote) + '\1')
 
     # Any remaining quotes should be opening ones:
